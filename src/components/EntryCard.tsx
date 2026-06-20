@@ -17,7 +17,7 @@ export function EntryCard({ entry }: { entry: ContentEntry }) {
       className={`scroll-mt-24 overflow-hidden rounded-xl border border-l-4 border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md ${SECTION_ACCENT[entry.section].cardBorder}`}
     >
       <div className="border-b border-slate-100 bg-slate-50 px-6 py-5">
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
           <h3 className="text-xl font-semibold tracking-tight text-navy-900">
             <a
               href={entry.url}
@@ -35,15 +35,15 @@ export function EntryCard({ entry }: { entry: ContentEntry }) {
               </span>
             </a>
           </h3>
-          <div className="mt-0.5 flex shrink-0 flex-wrap items-center justify-end gap-1.5">
+          <div className="flex flex-wrap items-center gap-1.5 sm:mt-0.5 sm:shrink-0 sm:justify-end">
             <span
               title={AFFILIATION_INFO[entry.affiliation].description}
-              className={`cursor-help whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${AFFILIATION_INFO[entry.affiliation].badgeClass}`}
+              className={`cursor-help whitespace-normal rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset sm:whitespace-nowrap ${AFFILIATION_INFO[entry.affiliation].badgeClass}`}
             >
               {AFFILIATION_INFO[entry.affiliation].label}
             </span>
             <span
-              className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${STATUS_INFO[entry.status].badgeClass}`}
+              className={`whitespace-normal rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset sm:whitespace-nowrap ${STATUS_INFO[entry.status].badgeClass}`}
             >
               {STATUS_INFO[entry.status].label}
             </span>

@@ -12,7 +12,7 @@ export function Header() {
           <span className="font-display text-lg">Projects and Data</span>
         </Link>
 
-        <nav className="order-last w-full sm:order-none sm:ml-auto sm:w-auto">
+        <nav className="hidden sm:ml-auto sm:block sm:w-auto">
           <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-200">
             {SECTION_ORDER.map((section) => (
               <li key={section}>
