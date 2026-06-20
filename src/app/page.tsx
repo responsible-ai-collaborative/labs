@@ -1,6 +1,5 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SectionNav } from '@/components/SectionNav';
 import { SectionBlock } from '@/components/SectionBlock';
 import { HeroBackground } from '@/components/HeroBackground';
 import { SectionAutoOpen } from '@/components/SectionAutoOpen';
@@ -71,8 +70,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <SectionNav />
 
       <main className="divide-y divide-slate-200">
         {sections.map(({ info, entries }) => (

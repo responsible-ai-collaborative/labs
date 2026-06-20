@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { SECTION_ORDER, SECTION_INFO } from '@/lib/content';
 
-/** Dark navy top bar with branding and section navigation. */
+/** Dark navy top bar with branding and section anchor navigation. */
 export function Header() {
   return (
     <header className="bg-navy-900 text-white">

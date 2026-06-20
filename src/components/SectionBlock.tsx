@@ -14,7 +14,8 @@ export function SectionBlock({ info, entries }: SectionBlockProps) {
       <div className="mx-auto max-w-content px-6">
         {/* Section is collapsed by default; the heading toggles it open. */}
         <details className="group/section">
-          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          {/* Heading sticks to the top while scrolling through the section. */}
+          <summary className="sticky top-0 z-30 cursor-pointer list-none border-b border-transparent bg-white/95 py-3 backdrop-blur group-open/section:border-slate-200 [&::-webkit-details-marker]:hidden">
             <span className="flex items-center gap-3">
               <span
                 className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg ${SECTION_ACCENT[info.id].iconChip}`}

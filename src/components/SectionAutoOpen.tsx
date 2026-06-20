@@ -11,13 +11,20 @@ export function SectionAutoOpen() {
   useEffect(() => {
     const openSection = (id: string, scroll: boolean) => {
       if (!id) return;
-      const section = document.getElementById(id);
-      if (!section) return;
-      const details = section.querySelector('details');
-      if (details && !details.open) details.open = true;
+      const el = document.getElementById(id);
+      if (!el) return;
+      // Open every <details> the target lives inside so it becomes visible...
+      for (let node: HTMLElement | null = el; node; node = node.parentElement) {
+        if (node.tagName === 'DETAILS') (node as HTMLDetailsElement).open = true;
+      }
+      // ...and, when the target is a whole section, open that section's details.
+      if (el.tagName === 'SECTION') {
+        const inner = el.querySelector('details');
+        if (inner) inner.open = true;
+      }
       if (scroll) {
         requestAnimationFrame(() =>
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' }),
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' }),
         );
       }
     };
