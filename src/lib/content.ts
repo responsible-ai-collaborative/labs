@@ -25,7 +25,7 @@ export const SECTION_INFO: Record<Section, SectionInfo> = {
     id: 'taxonomy',
     title: 'Applied Taxonomies',
     tagline:
-      'Shared classification schemes applied to one or more of the databases above.',
+      'Shared classification schemes applied to one or more of the databases above. Every database has its own native schema, which we are not stating here. This section is for schema intended for broad application or standardization.',
   },
   database: {
     id: 'database',
