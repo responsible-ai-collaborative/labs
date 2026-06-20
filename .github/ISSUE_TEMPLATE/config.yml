@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Entry authoring guide
+    url: https://github.com/responsible-ai-collaborative/labs/blob/main/content/README.md
+    about: How entries and their MDX fields work — worth a read before you submit.

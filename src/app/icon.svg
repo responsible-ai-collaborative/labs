@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Responsible AI Collaborative">
+  <!-- Navy app tile, matching the RAIC logo background (#001934). -->
+  <rect width="64" height="64" rx="11" fill="#001934"/>
+  <!-- Microchip outline + circuit traces and node pads, in white. -->
+  <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round">
+    <rect x="15.5" y="21" width="33" height="22" rx="3.5"/>
+    <!-- top pins -->
+    <path d="M23 21V13M32 21V13M41 21V13"/>
+    <!-- bottom pins -->
+    <path d="M23 43v8M32 43v8M41 43v8"/>
+    <!-- left pins -->
+    <path d="M15.5 28H8M15.5 36H8"/>
+    <!-- right pins -->
+    <path d="M48.5 28H56M48.5 36H56"/>
+    <!-- node pads (open rings) -->
+    <g stroke-width="1.9" fill="#001934">
+      <circle cx="23" cy="10" r="2"/><circle cx="32" cy="10" r="2"/><circle cx="41" cy="10" r="2"/>
+      <circle cx="23" cy="54" r="2"/><circle cx="32" cy="54" r="2"/><circle cx="41" cy="54" r="2"/>
+      <circle cx="5" cy="28" r="2"/><circle cx="5" cy="36" r="2"/>
+      <circle cx="59" cy="28" r="2"/><circle cx="59" cy="36" r="2"/>
+    </g>
+  </g>
+  <!-- RAIC wordmark. -->
+  <text x="32" y="33" fill="#ffffff" text-anchor="middle" dominant-baseline="central"
+        font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="11.5" font-weight="700" letter-spacing="-0.3">RAIC</text>
+</svg>

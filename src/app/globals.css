@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+  /* Offset anchored scrolls so headings clear the sticky section nav. */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-white text-navy-900 antialiased;
+}
+
+/* Subtle, AIID-style hairline used to separate page regions. */
+.hairline {
+  @apply border-t border-slate-200;
+}

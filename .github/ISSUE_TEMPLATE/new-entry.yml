@@ -1,0 +1,144 @@
+name: Submit an entry
+description: Propose a project or dataset to be added to RAIC Projects and Data.
+title: "[Entry]: <your project title>"
+labels: ["entry submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Each entry on the site is built from an MDX
+        file with a fixed set of fields. Please fill in **all** of the fields
+        below — they map one-to-one to that file.
+
+        Responsible AI Collaborative personnel will review your submission and,
+        if it meets the [inclusion criteria](https://responsible-ai-collaborative.github.io/labs/criteria/),
+        add it to the repository. Entries should advance the breadth or depth of
+        real-world AI safety data coverage (a taxonomy, database, research
+        effort, or community project aligned with that mission).
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The name shown on the entry's card.
+      placeholder: e.g. AI Hallucination Cases
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link to the project page, docs, or repository. Must start with http://, https://, /, or #.
+      placeholder: https://example.org/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      description: Which section of the page this entry belongs in.
+      options:
+        - taxonomy
+        - database
+        - research
+        - community
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: The lifecycle state of the work.
+      options:
+        - in development
+        - complete
+        - perpetual
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Affiliation
+      description: The project's relationship to the Responsible AI Collaborative (RAIC).
+      options:
+        - "raic — organized by the RAIC"
+        - "friends — works with the RAIC, but is not organized by it"
+        - "fans — not affiliated with the RAIC, but shares a related mission"
+        - "communication — in communication with the RAIC"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: The person, team, or organization responsible for the work.
+      placeholder: e.g. Responsible AI Collaborative
+    validations:
+      required: true
+
+  - type: input
+    id: lastUpdated
+    attributes:
+      label: Last updated
+      description: The date the work was last updated, in YYYY-MM-DD format.
+      placeholder: 2026-06-20
+    validations:
+      required: true
+
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: A one-sentence summary shown under the title.
+      placeholder: A curated database of legal cases where generative AI produced hallucinated citations.
+    validations:
+      required: true
+
+  - type: input
+    id: intendedUser
+    attributes:
+      label: Intended user
+      description: Who this work is for.
+      placeholder: e.g. Researchers, practitioners, and policymakers
+    validations:
+      required: true
+
+  - type: input
+    id: purpose
+    attributes:
+      label: Purpose
+      description: Why this work exists / what it sets out to do.
+      placeholder: e.g. Track AI-related legal cases from the initial complaint onward.
+    validations:
+      required: true
+
+  - type: textarea
+    id: body
+    attributes:
+      label: Full description (entry body)
+      description: The longer body shown when a reader expands the card. Markdown is supported.
+      placeholder: |
+        A few paragraphs describing the project, what it captures, and how to use it.
+
+        ### A subheading
+        - A bullet
+        - Another bullet
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have filled in every field above.
+          required: true
+        - label: This entry advances the breadth or depth of real-world AI safety data coverage.
+          required: true
+        - label: I understand RAIC personnel will review this submission and add it only if it meets the inclusion criteria.
+          required: true
